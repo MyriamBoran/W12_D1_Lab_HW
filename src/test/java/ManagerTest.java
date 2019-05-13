@@ -42,6 +42,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void checkRaiseSalaryWithNeg(){
+        Employee employee = (Manager) manager;
+        assertEquals(0, employee.increaseSalary(-10), 1);
+    }
+
+    @Test
     public void checkPayBonus(){
         Employee employee = (Manager) manager;
         assertEquals(0.12, employee.payBonus(), 0.1);
